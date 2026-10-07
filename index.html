@@ -1,0 +1,2736 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Throttlerz Point | Bike Buying & Selling</title>
+
+<style>
+
+/* =========================
+   COLOR SYSTEM
+========================= */
+
+:root{
+    /* Main Background */
+    --black:#050816;
+    --dark:#0A1020;
+    --dark2:#0F172A;
+    --card:#111827;
+
+    /* Neon Purple */
+    --orange:#8B5CF6;
+    --orange-light:#A855F7;
+
+    /* Ice Blue */
+    --gold:#67E8F9;
+
+    /* Text */
+    --white:#FFFFFF;
+    --cream:#F8FAFC;
+    --gray:#94A3B8;
+
+    /* Borders */
+    --border:#263252;
+
+    /* WhatsApp */
+    --green:#25D366;
+}
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:var(--black);
+
+    color:var(--white);
+
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+
+    height:78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:
+    rgba(5,5,5,.94);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.logo{
+
+    font-size:21px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:var(--orange);
+}
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+}
+
+.nav-links a{
+
+    color:#ddd;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:var(--orange);
+}
+
+.instagram-btn{
+
+    padding:
+    9px 17px;
+
+    border:
+    1px solid #3a3a3a;
+
+    border-radius:30px;
+}
+
+.instagram-btn:hover{
+
+    border-color:
+    var(--orange);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+    min-height:720px;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(
+        circle at 80% 30%,
+        rgba(255,90,31,.30),
+        transparent 30%
+    ),
+
+    radial-gradient(
+        circle at 55% 90%,
+        rgba(242,184,75,.10),
+        transparent 30%
+    ),
+
+    linear-gradient(
+        135deg,
+        #050505,
+        #17100c
+    );
+}
+
+.hero:after{
+
+    content:"";
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    right:-200px;
+
+    top:100px;
+
+    background:
+    var(--orange);
+
+    opacity:.05;
+
+    filter:blur(100px);
+}
+
+.hero-content{
+
+    max-width:800px;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.eyebrow{
+
+    color:
+    var(--orange-light);
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    letter-spacing:4px;
+
+    margin-bottom:20px;
+}
+
+.hero h1{
+
+    font-size:
+    clamp(52px,7vw,90px);
+
+    line-height:.94;
+
+    letter-spacing:-4px;
+}
+
+.hero h1 span{
+
+    color:
+    var(--orange);
+}
+
+.hero p{
+
+    color:#aaa;
+
+    max-width:670px;
+
+    margin:
+    28px 0;
+
+    font-size:18px;
+}
+
+.buttons{
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+
+    padding:
+    14px 21px;
+
+    border-radius:9px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:bold;
+
+    border:
+    1px solid var(--border);
+
+    transition:.25s;
+}
+
+.btn-primary{
+
+    background:
+    var(--orange);
+
+    border-color:
+    var(--orange);
+
+    color:white;
+}
+
+.btn-primary:hover{
+
+    background:
+    var(--orange-light);
+
+    transform:
+    translateY(-3px);
+}
+
+.btn-outline{
+
+    background:
+    rgba(255,255,255,.03);
+}
+
+.btn-outline:hover{
+
+    background:#1c1c1c;
+
+    transform:
+    translateY(-3px);
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats{
+
+    background:#0d0d0d;
+
+    border-top:
+    1px solid var(--border);
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+}
+
+.stat{
+
+    text-align:center;
+
+    padding:30px 10px;
+
+    border-right:
+    1px solid var(--border);
+}
+
+.stat:last-child{
+
+    border:none;
+}
+
+.stat h2{
+
+    font-size:30px;
+
+    color:
+    var(--cream);
+}
+
+.stat p{
+
+    color:#888;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   INSTAGRAM STRIP
+========================= */
+
+.instagram-strip{
+
+    padding:18px 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        #130b08,
+        #1c130f,
+        #130b08
+    );
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.instagram-content{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    color:#ddd;
+}
+
+.instagram-content strong{
+
+    color:
+    var(--orange-light);
+}
+
+.instagram-content a{
+
+    color:
+    var(--gold);
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+
+    padding:100px 0;
+}
+
+.section-head{
+
+    margin-bottom:45px;
+}
+
+.section-head small{
+
+    color:
+    var(--orange);
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.section-head h2{
+
+    font-size:
+    clamp(38px,5vw,58px);
+
+    line-height:1;
+
+    margin-top:10px;
+}
+
+.section-head p{
+
+    color:#888;
+
+    max-width:650px;
+
+    margin-top:15px;
+}
+
+
+/* =========================
+   HOW WE WORK
+========================= */
+
+.steps{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+}
+
+.step{
+
+    padding:28px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #191919,
+        #101010
+    );
+
+    border:
+    1px solid var(--border);
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.step:hover{
+
+    transform:
+    translateY(-6px);
+
+    border-color:
+    #613724;
+}
+
+.step-number{
+
+    color:
+    var(--orange);
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.step h3{
+
+    margin:
+    14px 0 9px;
+}
+
+.step p{
+
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   BIKES
+========================= */
+
+.bikes-section{
+
+    background:
+    linear-gradient(
+        180deg,
+        #090909,
+        #12100e
+    );
+}
+
+.bike-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:25px;
+}
+
+.bike-card{
+
+    background:
+    var(--card);
+
+    border:
+    1px solid var(--border);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    transition:.35s;
+}
+
+.bike-card:hover{
+
+    transform:
+    translateY(-8px);
+
+    border-color:
+    #754027;
+
+    box-shadow:
+    0 20px 60px
+    rgba(0,0,0,.5);
+}
+
+
+/* IMAGE PLACEHOLDER */
+
+.bike-image{
+
+    height:300px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:120px;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(255,90,31,.20),
+        transparent 55%
+    ),
+
+    #090909;
+}
+
+.bike-info{
+
+    padding:27px;
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:
+    5px 11px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:1px;
+}
+
+.available{
+
+    background:#173421;
+
+    color:#6cf09a;
+}
+
+.bike-info h3{
+
+    font-size:27px;
+
+    margin:
+    14px 0 7px;
+}
+
+.specs{
+
+    color:#888;
+
+    font-size:14px;
+}
+
+.price{
+
+    font-size:26px;
+
+    font-weight:900;
+
+    margin:17px 0;
+
+    color:
+    var(--cream);
+}
+
+.contact-price{
+
+    color:
+    var(--gold);
+
+    font-size:21px;
+}
+
+
+/* =========================
+   FIND MY BIKE
+========================= */
+
+.requirement{
+
+    display:grid;
+
+    grid-template-columns:
+    40% 60%;
+
+    gap:50px;
+
+    align-items:start;
+}
+
+.requirement-text h2{
+
+    font-size:
+    clamp(40px,5vw,65px);
+
+    line-height:.95;
+}
+
+.requirement-text h2 span{
+
+    color:
+    var(--orange);
+}
+
+.requirement-text p{
+
+    color:#999;
+
+    margin-top:22px;
+}
+
+.points{
+
+    margin-top:25px;
+}
+
+.point{
+
+    padding:
+    13px 15px;
+
+    background:#121212;
+
+    border:
+    1px solid var(--border);
+
+    border-radius:9px;
+
+    margin-bottom:10px;
+
+    color:#ddd;
+}
+
+.form-box{
+
+    background:
+    linear-gradient(
+        145deg,
+        #191919,
+        #101010
+    );
+
+    border:
+    1px solid var(--border);
+
+    padding:30px;
+
+    border-radius:20px;
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:18px;
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:7px;
+}
+
+.form-group.full{
+
+    grid-column:
+    1 / -1;
+}
+
+label{
+
+    color:#ddd;
+
+    font-size:13px;
+
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+
+    background:#090909;
+
+    color:white;
+
+    border:
+    1px solid #333;
+
+    padding:13px;
+
+    border-radius:8px;
+
+    outline:none;
+
+    font-size:14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:
+    var(--orange);
+}
+
+textarea{
+
+    min-height:110px;
+
+    resize:vertical;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:18px;
+}
+
+.why{
+
+    background:#111;
+
+    border:
+    1px solid var(--border);
+
+    padding:27px;
+
+    border-radius:18px;
+
+    transition:.3s;
+}
+
+.why:hover{
+
+    transform:
+    translateY(-5px);
+
+    border-color:
+    #553224;
+}
+
+.icon{
+
+    font-size:30px;
+}
+
+.why h3{
+
+    margin:
+    14px 0 7px;
+}
+
+.why p{
+
+    color:#888;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   CHAIRMAN
+========================= */
+
+.chairman-section{
+
+    background:
+
+    radial-gradient(
+        circle at 15% 50%,
+        rgba(255,90,31,.12),
+        transparent 30%
+    ),
+
+    #0e0e0e;
+}
+
+.chairman-box{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:25px;
+    align-items:center;
+
+    padding:40px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #1a1715,
+        #101010
+    );
+
+    border:
+    1px solid var(--border);
+
+    border-radius:22px;
+}
+
+.chairman-icon{
+
+    width:35px;
+
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    font: size 50px;
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,90,31,.25),
+        transparent 65%
+    );
+
+    border:
+    1px solid #493126;
+}
+
+.chairman-label{
+
+    color:
+    var(--orange);
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:3px;
+}
+
+.chairman-name{
+
+    font-size:
+    clamp(28px,4vw,43px);
+
+    margin-top:8px;
+}
+
+.chairman-text{
+
+    color:#999;
+
+    margin-top:12px;
+
+    max-width:700px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section{
+    padding:70px 0;
+}
+
+.about-box{
+    width:100%;
+    padding:50px 40px;
+    background:#0F172A;
+    border:1px solid #263252;
+    border-radius:22px;
+    box-sizing:border-box;
+}
+
+.about-content{
+    width:100%;
+    text-align:center;
+}
+
+.about-label{
+    display:block;
+    color:#67E8F9;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.about-content h2{
+    color:#FFFFFF;
+    font-size:42px;
+    font-weight:700;
+    margin:0 0 18px;
+}
+
+.about-content p{
+    color:#94A3B8;
+    font-size:18px;
+    line-height:1.7;
+    max-width:950px;
+    margin:0 auto;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    border-radius:25px;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(255,90,31,.16),
+        transparent 60%
+    ),
+
+    #111;
+
+    border:
+    1px solid var(--border);
+}
+
+.contact-box h2{
+
+    font-size:
+    clamp(40px,5vw,60px);
+}
+
+.contact-box p{
+
+    color:#888;
+
+    max-width:600px;
+
+    margin:
+    15px auto 25px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    border-top:
+    1px solid var(--border);
+
+    padding:35px 5%;
+
+    text-align:center;
+
+    color:#777;
+}
+
+.footer-brand{
+
+    color:white;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+
+.footer-brand span{
+
+    color:
+    var(--orange);
+}
+
+.footer-instagram{
+
+    color:
+    var(--orange-light);
+
+    margin-top:8px;
+}
+
+.footer-chairman{
+
+    margin-top:8px;
+
+    color:#666;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        gap:15px;
+    }
+
+    .steps,
+    .why-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .bike-grid{
+
+        grid-template-columns:
+        1fr;
+    }
+
+    .requirement{
+
+        grid-template-columns:
+        1fr;
+    }
+
+    .chairman-box{
+
+        grid-template-columns:
+        1fr;
+
+        text-align:center;
+    }
+
+    .chairman-icon{
+
+        margin:auto;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    nav{
+
+        padding:
+        0 4%;
+    }
+
+    .nav-links{
+
+        display:none;
+    }
+
+    .hero{
+
+        min-height:620px;
+    }
+
+    .hero h1{
+
+        font-size:50px;
+
+        letter-spacing:-2px;
+    }
+
+    .stats-grid{
+
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .stat{
+
+        border-bottom:
+        1px solid var(--border);
+    }
+
+    .steps,
+    .why-grid,
+    .form-grid{
+
+        grid-template-columns:
+        1fr;
+    }
+
+    .form-group.full{
+
+        grid-column:auto;
+    }
+
+    .chairman-box{
+
+        padding:
+        28px 20px;
+    }
+
+    section{
+
+        padding:
+        70px 0;
+    }
+
+    .instagram-content{
+
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav>
+
+<div class="logo">
+
+THROTTLERZ <span>POINT</span>
+
+</div>
+
+
+<div class="nav-links">
+
+<a href="#bikes">
+Available Bikes
+</a>
+
+<a href="#how">
+How We Work
+</a>
+
+<a href="#requirement">
+Find My Bike
+</a>
+
+<a href="#about">
+About
+</a>
+
+<a
+href="https://www.instagram.com/throttlerz_point/"
+target="_blank"
+class="instagram-btn">
+
+📸 Instagram
+
+</a>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+
+<div class="eyebrow">
+
+BIKE BUYING • SELLING • SOURCING
+
+</div>
+
+
+<h1>
+
+Your Bike.<br>
+
+Your Budget.<br>
+
+<span>Our Search.</span>
+
+</h1>
+
+
+<p>
+
+Looking for a specific bike?
+
+Tell Throttlerz Point what you need.
+
+We'll try to find the right bike based on
+your model, budget and requirements.
+
+</p>
+
+
+<div class="buttons">
+
+<a
+href="#bikes"
+class="btn btn-primary">
+
+🏍️ View Available Bikes
+
+</a>
+
+
+<a
+href="#requirement"
+class="btn btn-outline">
+
+📝 Find My Bike
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="container stats-grid">
+
+
+<div class="stat">
+
+<h2>
+10K+
+</h2>
+
+<p>
+Instagram Followers
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>
+4+
+</h2>
+
+<p>
+Years of Trust
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>
+Quality
+</h2>
+
+<p>
+Checked Bikes
+</p>
+
+</div>
+
+
+<div class="stat">
+
+<h2>
+Direct
+</h2>
+
+<p>
+WhatsApp Enquiry
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     INSTAGRAM
+========================= -->
+
+<div class="instagram-strip">
+
+<div class="instagram-content">
+
+📸 Follow us on Instagram
+
+<strong>
+@throttlerz_point
+</strong>
+
+<a
+href="https://www.instagram.com/throttlerz_point/"
+target="_blank">
+
+→ Visit Page
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     HOW WE WORK
+========================= -->
+
+<section id="how">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<small>
+OUR PROCESS
+</small>
+
+<h2>
+How Throttlerz Point Works
+</h2>
+
+<p>
+
+We don't use a traditional shopping cart.
+
+We connect your requirement with
+our bike sourcing process.
+
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01 / REQUIREMENT
+</div>
+
+<h3>
+Tell Us What You Need
+</h3>
+
+<p>
+
+Share your preferred brand,
+model, budget, year, KM
+and other expectations.
+
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+02 / SOURCE
+</div>
+
+<h3>
+We Search For It
+</h3>
+
+<p>
+
+We look for a suitable bike
+through our available sources
+and network.
+
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+03 / CHECK
+</div>
+
+<h3>
+Verify The Bike
+</h3>
+
+<p>
+
+We discuss the condition,
+documents and deal before
+proceeding.
+
+</p>
+
+</div>
+
+
+
+<div class="step">
+
+<div class="step-number">
+04 / CONNECT
+</div>
+
+<h3>
+We Contact You
+</h3>
+
+<p>
+
+Once we find a suitable bike,
+we contact you directly.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     AVAILABLE BIKES
+========================= -->
+
+<section
+class="bikes-section"
+id="bikes">
+
+<div class="container">
+
+
+<div class="section-head">
+
+<small>
+AVAILABLE NOW
+</small>
+
+<h2>
+Featured Bikes
+</h2>
+
+<p>
+
+Our available bikes change based
+on current stock.
+
+Contact us for the latest availability.
+
+</p>
+
+</div>
+
+
+<div class="bike-grid">
+
+
+<!-- =========================
+     YAMAHA R15 S
+========================= -->
+
+<div class="bike-card">
+
+
+<div class="bike-image">
+
+🏍️<img src="r15.jpeg" alt="r15 s">
+
+</div>
+
+
+<div class="bike-info">
+
+
+<span class="badge available">
+
+AVAILABLE
+
+</span>
+
+
+<h3>
+
+Yamaha R15 S
+
+</h3>
+
+
+<div class="specs">
+
+2024 Model
+•
+Single Owner
+
+</div>
+
+
+<div class="price">
+
+₹1,35,000
+
+</div>
+
+
+<a
+href="#"
+class="btn btn-primary bike-whatsapp"
+data-bike="Yamaha R15 S | 2024 Model | Single Owner | ₹1,35,000">
+
+💬 Enquire on WhatsApp
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =========================
+     HONDA CBZ
+========================= -->
+
+<div class="bike-card">
+
+
+<div class="bike-image">
+
+🏍️<img src="honda.jpeg" alt="honda cbz">
+
+</div>
+
+
+<div class="bike-info">
+
+
+<span class="badge available">
+
+AVAILABLE
+
+</span>
+
+
+<h3>
+
+Honda CBZ
+
+</h3>
+
+
+<div class="specs">
+
+2012 Model
+•
+Price Not Fixed
+
+</div>
+
+
+<div class="price contact-price">
+
+Contact for Price
+
+</div>
+
+
+<a
+href="#"
+class="btn btn-primary bike-whatsapp"
+data-bike="Honda CBZ | 2012 Model | Price Not Fixed">
+
+💬 Enquire on WhatsApp
+
+</a>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FIND MY BIKE
+========================= -->
+
+<section id="requirement">
+
+<div class="container requirement">
+
+
+<div class="requirement-text">
+
+
+<div class="section-head">
+
+<small>
+CUSTOMER REQUIREMENT
+</small>
+
+
+<h2>
+
+Tell us your
+<span>dream bike.</span>
+
+</h2>
+
+
+<p>
+
+Can't find your bike in our current stock?
+
+No problem.
+
+Tell us what you're looking for and
+we'll try to source a suitable bike.
+
+</p>
+
+</div>
+
+
+<div class="points">
+
+
+<div class="point">
+✓ Preferred Brand & Model
+</div>
+
+
+<div class="point">
+✓ Your Budget
+</div>
+
+
+<div class="point">
+✓ Preferred Year
+</div>
+
+
+<div class="point">
+✓ Maximum KM
+</div>
+
+
+<div class="point">
+✓ Fuel Type
+</div>
+
+
+<div class="point">
+✓ Special Requirements
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- FORM -->
+
+<div class="form-box">
+
+
+<form id="bikeForm">
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
+
+<label>
+Your Name *
+</label>
+
+<input
+id="name"
+required
+placeholder="Enter your name">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+WhatsApp Number *
+</label>
+
+<input
+id="phone"
+required
+type="tel"
+placeholder="98765 43210">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Bike Type *
+</label>
+
+<select
+id="type"
+required>
+
+<option value="">
+Select type
+</option>
+
+<option>
+Commuter
+</option>
+
+<option>
+Sports
+</option>
+
+<option>
+Cruiser
+</option>
+
+<option>
+Scooter
+</option>
+
+<option>
+Adventure / Touring
+</option>
+
+<option>
+Any Type
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Preferred Brand *
+</label>
+
+<select
+id="brand"
+required>
+
+<option value="">
+Select brand
+</option>
+
+<option>
+Royal Enfield
+</option>
+
+<option>
+Yamaha
+</option>
+
+<option>
+Honda
+</option>
+
+<option>
+KTM
+</option>
+
+<option>
+TVS
+</option>
+
+<option>
+Bajaj
+</option>
+
+<option>
+Suzuki
+</option>
+
+<option>
+Any Brand
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Preferred Model
+</label>
+
+<input
+id="model"
+placeholder="Example: R15 / Classic 350">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Budget *
+</label>
+
+<input
+id="budget"
+required
+placeholder="Example: ₹1,50,000">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Preferred Year
+</label>
+
+<select id="year">
+
+<option>
+Any Year
+</option>
+
+<option>2026</option>
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018 or older</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Maximum KM
+</label>
+
+<input
+id="km"
+placeholder="Example: Below 30,000 KM">
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Fuel Type
+</label>
+
+<select id="fuel">
+
+<option>
+Any
+</option>
+
+<option>
+Petrol
+</option>
+
+<option>
+Electric
+</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>
+Your Location
+</label>
+
+<input
+id="location"
+placeholder="City / Area">
+
+</div>
+
+
+
+<div class="form-group full">
+
+<label>
+Anything Else You Expect?
+</label>
+
+<textarea
+id="notes"
+placeholder="Example: Single owner, specific colour, good condition, ABS etc.">
+</textarea>
+
+</div>
+
+
+
+<div class="form-group full">
+
+<button
+type="submit"
+class="btn btn-primary"
+style="border:none;cursor:pointer;">
+
+💬 Send Requirement on WhatsApp
+
+</button>
+
+</div>
+
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-head">
+
+<small>
+WHY THROTTLERZ POINT
+</small>
+
+<h2>
+Why Choose Us?
+</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why">
+
+<div class="icon">
+🔎
+</div>
+
+<h3>
+Requirement Based
+</h3>
+
+<p>
+
+Tell us what you want
+and we'll try to find it.
+
+</p>
+
+</div>
+
+
+
+<div class="why">
+
+<div class="icon">
+🤝
+</div>
+
+<h3>
+4+ Years Trust
+</h3>
+
+<p>
+
+Built through direct
+customer relationships
+and service.
+
+</p>
+
+</div>
+
+
+
+<div class="why">
+
+<div class="icon">
+💰
+</div>
+
+<h3>
+Budget Friendly
+</h3>
+
+<p>
+
+Your budget helps us focus
+on suitable bikes.
+
+</p>
+
+</div>
+
+
+
+<div class="why">
+
+<div class="icon">
+📱
+</div>
+
+<h3>
+10K+ Community
+</h3>
+
+<p>
+
+Follow our Instagram page
+for new bike updates.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CHAIRMAN
+========================= -->
+
+<section class="chairman-section">
+
+<div class="container">
+
+
+<div class="chairman-box">
+
+<div class="chairman-icon">
+
+👤<img src="Arsh.jpeg" alt="Arshavarthanan Anbuchezhiyan">
+
+</div>
+
+
+<div>
+
+
+<div class="chairman-label">
+
+CHAIRMAN
+
+</div>
+
+
+<div class="chairman-name">
+
+Mr. Arshavarthanan Anbuchezhiyan
+
+</div>
+
+
+<p class="chairman-text">
+
+Throttlerz Point is handled by
+Mr. Arshavarthanan Anbuchezhiyan,
+with a focus on customer trust,
+quality bikes and reliable
+bike buying and selling services.
+
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+class="about"
+id="about">
+
+<div class="container">
+
+
+<div class="about-box">
+
+
+<div class="section-head">
+
+<small>
+ABOUT THROTTLERZ POINT
+</small>
+
+
+<h2>
+
+More than a bike page.
+<span>A trusted connection.</span>
+
+</h2>
+
+
+<p>
+
+Throttlerz Point is a bike buying
+and selling page focused on connecting
+customers with quality bikes at
+budget-friendly prices.
+
+</p>
+
+
+<p>
+
+We source bikes based on availability
+and customer requirements, then connect
+the right bike with the right customer.
+
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+
+<div class="contact-box">
+
+
+<div class="eyebrow">
+
+LET'S CONNECT
+
+</div>
+
+
+<h2>
+
+Looking for a bike?
+
+</h2>
+
+
+<p>
+
+Tell us what you're looking for.
+
+We'll try to find the right bike for you.
+
+</p>
+
+
+<div
+class="buttons"
+style="justify-content:center">
+
+
+<a
+id="mainWhatsapp"
+href="#"
+class="btn btn-primary">
+
+💬 WhatsApp Us
+
+</a>
+
+
+<a
+href="https://www.instagram.com/throttlerz_point/"
+target="_blank"
+class="btn btn-outline">
+
+📸 @throttlerz_point
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+
+<div class="footer-brand">
+
+THROTTLERZ <span>POINT</span>
+
+</div>
+
+
+<div class="footer-instagram">
+
+📸 Instagram:
+@throttlerz_point
+
+</div>
+
+
+<div class="footer-chairman">
+
+Chairman:
+Mr. Arshavarthanan Anbuchezhiyan
+
+</div>
+
+
+<div style="margin-top:12px;">
+
+© 2026 Throttlerz Point.
+All Rights Reserved.
+
+</div>
+
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/*
+====================================
+THROTTLERZ POINT WHATSAPP
+====================================
+
+India Country Code = 91
+
+Actual Number:
+9003313917
+
+Final WhatsApp Number:
+919003313917
+*/
+
+const WHATSAPP_NUMBER =
+"919003313917";
+
+
+/* =========================
+   WHATSAPP LINK FUNCTION
+========================= */
+
+function whatsappLink(message){
+
+    return "https://wa.me/"
+    + WHATSAPP_NUMBER
+    + "?text="
+    + encodeURIComponent(message);
+
+}
+
+
+
+/* =========================
+   MAIN WHATSAPP
+========================= */
+
+document.getElementById(
+"mainWhatsapp"
+).href =
+
+whatsappLink(
+
+`Hi Throttlerz Point 👋
+
+I would like to know about your available bikes.
+
+Please share the current available bikes and details.
+
+Thank you!`
+
+);
+
+document.getElementById(
+"mainWhatsapp"
+).target="_blank";
+
+
+
+/* =========================
+   BIKE ENQUIRY
+========================= */
+
+document
+.querySelectorAll(".bike-whatsapp")
+.forEach(button => {
+
+
+    const bike =
+    button.getAttribute(
+        "data-bike"
+    );
+
+
+    const message =
+
+`Hi Throttlerz Point 👋
+
+I am interested in:
+
+${bike}
+
+Is this bike currently available?
+
+Please share more details.
+
+Thank you!`;
+
+
+    button.href =
+    whatsappLink(message);
+
+
+    button.target="_blank";
+
+});
+
+
+
+/* =========================
+   FIND MY BIKE FORM
+========================= */
+
+document.getElementById(
+"bikeForm"
+)
+.addEventListener(
+"submit",
+function(e){
+
+    e.preventDefault();
+
+
+    const name =
+    document.getElementById(
+        "name"
+    ).value;
+
+
+    const phone =
+    document.getElementById(
+        "phone"
+    ).value;
+
+
+    const type =
+    document.getElementById(
+        "type"
+    ).value;
+
+
+    const brand =
+    document.getElementById(
+        "brand"
+    ).value;
+
+
+    const model =
+    document.getElementById(
+        "model"
+    ).value
+    ||
+    "Any Model";
+
+
+    const budget =
+    document.getElementById(
+        "budget"
+    ).value;
+
+
+    const year =
+    document.getElementById(
+        "year"
+    ).value;
+
+
+    const km =
+    document.getElementById(
+        "km"
+    ).value
+    ||
+    "No Specific Limit";
+
+
+    const fuel =
+    document.getElementById(
+        "fuel"
+    ).value;
+
+
+    const location =
+    document.getElementById(
+        "location"
+    ).value
+    ||
+    "Not Specified";
+
+
+    const notes =
+    document.getElementById(
+        "notes"
+    ).value
+    ||
+    "No Additional Requirements";
+
+
+    const message =
+
+`Hi Throttlerz Point 👋
+
+I am looking for a bike.
+
+━━━━━━━━━━━━━━━━
+CUSTOMER REQUIREMENT
+━━━━━━━━━━━━━━━━
+
+👤 Name:
+${name}
+
+📱 WhatsApp:
+${phone}
+
+🏍️ Bike Type:
+${type}
+
+🏷️ Brand:
+${brand}
+
+🔧 Model:
+${model}
+
+💰 Budget:
+${budget}
+
+📅 Preferred Year:
+${year}
+
+🛣️ Maximum KM:
+${km}
+
+⛽ Fuel:
+${fuel}
+
+📍 Location:
+${location}
+
+📝 Other Requirements:
+${notes}
+
+━━━━━━━━━━━━━━━━
+
+Please contact me if you find a suitable bike.
+
+Thank you!`;
+
+
+    window.open(
+        whatsappLink(message),
+        "_blank"
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>
+```
